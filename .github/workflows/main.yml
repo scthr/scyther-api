@@ -1,0 +1,29 @@
+name: CI
+
+on: [ push ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install Python development packages
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pipenv
+
+      - name: Install requirements
+        run: make install-dev
+
+      - name: Run flake8
+        run: make lint
+
