@@ -6,14 +6,13 @@ install-dev:
 
 
 lint:
-	flake8 scyther_api
-	mypy scyther_api
+	pipenv run flake8 scyther_api
+	pipenv run mypy scyther_api
 
 format:
-	black scyther_api
-	isort scyther_api
+	pipenv run black scyther_api
+	pipenv run isort scyther_api
 
 run:
-	python manage.py migrate
-	python manage.py runserver
-
+	pipenv run python manage.py migrate
+	pipenv run python manage.py runserver
