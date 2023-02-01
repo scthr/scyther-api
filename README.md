@@ -6,10 +6,10 @@ Scyther API
 
 ## Install requirements
 
-Uses [pip-tools](https://github.com/jazzband/pip-tools).
+Uses [pipenv](https://pipenv.pypa.io).
 
 ```bash
-make pip-update
+make install-dev
 ```
 
 ## Run test server

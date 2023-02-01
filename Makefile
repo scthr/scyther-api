@@ -1,16 +1,9 @@
-pip-install-dev:
-	pip install --upgrade pip pip-tools
-	pip-sync requirements.txt requirements-dev.txt
+install:
+	pipenv install
 
-pip-install:
-	pip install --upgrade pip pip-tools
-	pip-sync requirements.txt
+install-dev:
+	pipenv install --dev
 
-pip-update:
-	pip install --upgrade pip pip-tools
-	pip-compile requirements.in
-	pip-compile requirements-dev.in
-	pip-sync requirements.txt requirements-dev.txt
 
 lint:
 	flake8 scyther_api
