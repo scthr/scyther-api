@@ -1,9 +1,10 @@
 from functools import wraps
+from typing import List, Union
 
 from django.http import HttpResponse
 
 
-def restrict_methods(methods):
+def restrict_methods(methods: Union[List[str], str]):
     """
     Restricts a route to only allow certain HTTP methods.
 

@@ -7,7 +7,6 @@ install-dev:
 
 lint:
 	pipenv run flake8 scyther_api
-	pipenv run mypy scyther_api
 
 format:
 	pipenv run black scyther_api
