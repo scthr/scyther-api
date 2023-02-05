@@ -5,9 +5,13 @@ name = "pypi"
 
 [packages]
 django = "==4.1.5"
+django-eventstream = "==4.5.1"
+channels = "~=3.0"
+djangorestframework = "==3.14.0"
+markdown = "==3.4.1"
+django-filter = "==22.1"
 
 [dev-packages]
-mypy = "==0.991"
 black = "==22.12.0"
 isort = "==5.12.0"
 flake8 = "==6.0.0"
